@@ -1,0 +1,6 @@
+{
+  "name": "Best Brother Interactive",
+  "description": "A cute, romantic, and playful interactive website to celebrate your best brother with animated interactions, dynamic buttons, and celebration effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+:root {
+  --primary-blue: #3B82F6;
+  --soft-blue: #DBEAFE;
+  --accent-blue: #1D4ED8;
+  --white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--white);
+  }
+}
+
+.font-fredoka {
+  font-family: 'Fredoka', 'Outfit', sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Vibrant Palette App Container */
+.vibrant-bg {
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(circle at top right, #eff6ff 0%, transparent 60%),
+    radial-gradient(circle at bottom left, #dbeafe 0%, transparent 60%);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-26px) rotate(8deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(24px) rotate(-8deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3), 0 0 35px rgba(59, 130, 246, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 15px 35px -5px rgba(29, 78, 216, 0.5), 0 0 55px rgba(147, 197, 253, 0.4);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25) rotate(45deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 8s ease-in-out infinite reverse;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.2s infinite ease-in-out;
+}
+
+.animate-sparkle {
+  animation: sparkleTwinkle 2.2s infinite ease-in-out;
+}
+
+.animate-pop {
+  animation: pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Vibrant Palette Button & Text Stylings */
+.btn-vibrant-yes {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-vibrant-yes:hover {
+  transform: scale(1.08);
+  background-color: var(--accent-blue);
+  box-shadow: 0 18px 35px -5px rgba(29, 78, 216, 0.5);
+}
+
+.btn-vibrant-no {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-vibrant-no:hover {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.btn-vibrant-no:active {
+  transform: scale(0.92);
+}
+
+.main-question-text {
+  color: var(--accent-blue);
+  text-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.celebration-vibrant-text {
+  color: var(--primary-blue);
+  text-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+}
+
+/* Glassmorphism subtle overlay */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(191, 219, 254, 0.8);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(147, 197, 253, 0.6);
+}
+
